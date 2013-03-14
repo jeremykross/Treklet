@@ -1,0 +1,2 @@
+var treklet = {}
+treklet.events = {}

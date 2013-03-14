@@ -1,0 +1,70 @@
+
+@-moz-keyframes anim-scan {
+0% {
+  background-position: 0px 0px;
+}
+100% {
+  background-position: 0px -128px;
+}
+}
+@-webkit-keyframes anim-scan {
+0% {
+  background-position: 0px 0px;
+}
+100% {
+  background-position: 0px -128px;
+}
+}body {
+  width: 100%;
+  height: 100%;
+  background-color: black;
+}
+.content {
+  margin-left: auto;
+  margin-right: auto;
+}
+.terminal-text {
+  color: #00FEE3;
+  font-family: 'Press Start 2P', cursive;
+  font-size: 14px;
+  line-height: 50px;
+}
+#marker, .marker {
+  background-color: #00FEE3;
+  width: 25px;
+  height: 50px;
+  float: left;
+}
+.marker.decay {
+  position: absolute;
+}
+#current-line {
+  z-index: 10000;
+  position: relative;
+}
+#current-line span {
+  float: left;
+}
+#history, .history {
+  position: fixed;
+  bottom: 100px;
+}
+#scanlines {
+  -webkit-animation-name: anim-scan;
+  -moz-animation-name: anim-scan;
+  -webkit-animation-duration: 4s;
+  -moz-animation-duration: 4s;
+  -webkit-animation-timing-function: linear;
+  -moz-animation-timing-function: linear;
+  -webkit-animation-iteration-count: infinite;
+  -moz-animation-iteration-count: infinite;
+  z-index: 100;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: .25;
+  pointer-events: none;
+  background-image: url('../images/scanlines.png');
+}
